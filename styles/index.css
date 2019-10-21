@@ -34,6 +34,7 @@ section {
 }
 
 input {
+  border: solid 0.05rem #aaaaaa;
   border-radius: 0.2rem;
   padding: 0.4rem 0.6rem;
   font-size: 0.9rem;
@@ -59,4 +60,10 @@ button {
 button:hover {
   color: #fff;
   background-color: #333333;
+}
+button:active {
+  color: #fff;
+  background-color: #4f4f4f;
+  border-color: #4f4f4f;
+  transform: translateY(-0.1rem);
 }
