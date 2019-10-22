@@ -8,7 +8,7 @@ body {
 section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: calc(100vh/3) calc(100vh/3) calc(100vh/3);
+  grid-template-rows: calc(100vh/4) calc(100vh/4) calc(100vh/4) calc(100vh/4);
 }
 
 .title {
@@ -20,7 +20,7 @@ section {
 
 .form {
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   text-align: center;
   margin: auto 0 auto;
 }
@@ -29,8 +29,12 @@ section {
   display: grid;
   text-align: left;
   grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 0.2rem;
-  margin: 0 0 0.4rem 0;
+  row-gap: 0.3rem;
+  /*margin: 0 0 0.4rem 0;*/
+}
+
+.label {
+  align-self: center;
 }
 
 input {
@@ -43,12 +47,26 @@ input {
 input:invalid {
   border: solid 0.05rem #ee4500;
 }
-input:valid {
+input:invalid:not(:focus) {
   border: solid 0.05rem #aaaaaa;
 }
 
+input:valid {
+  border: solid 0.05rem #0bb741;
+}
+
+input.notvalid {
+  border: solid 0.05rem #ee4500;
+}
+
+.error {
+  color: #ee4500;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
 button {
-  margin: 0.8rem 0 0;
+  margin: 1rem 0 0;
   padding: 0.4rem 0.6rem;
   border-radius: 0.4rem;
   font-size: 0.9rem;
